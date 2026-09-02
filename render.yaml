@@ -11,7 +11,7 @@ services:
     runtime: static
     branch: main
     autoDeployTrigger: commit
-    buildCommand: npm ci && npm run build
+    buildCommand: pnpm install --frozen-lockfile && pnpm build
     staticPublishPath: ./dist
 
     # Render crea estos custom domains al sincronizar el Blueprint y luego

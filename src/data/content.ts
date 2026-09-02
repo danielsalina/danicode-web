@@ -2,16 +2,16 @@ export const hero = {
   eyebrow: 'Dani Code',
   /** Una línea por frase: el ritmo del titular es intencional. */
   headlineLines: ['Construyo software.', 'Lanzo productos.', 'Documento el proceso.'],
-  lead: 'Trabajo sobre todo del lado del backend: modelo el dominio, diseño las APIs y me ocupo de que el sistema siga en pie cuando ya está en producción.',
+  lead: 'Trabajo principalmente en backend: modelo el dominio, diseño las APIs y mantengo los sistemas operativos en producción.',
   detail:
-    'Hoy eso significa productos SaaS multi-tenant sobre Node.js y PostgreSQL, con su capa de permisos, sus integraciones y su deploy en la nube.',
+    'Construyo productos SaaS multi-tenant con Node.js y PostgreSQL, permisos, integraciones y despliegue en la nube.',
   photoAlt: 'Retrato de Daniel Salinas',
 } as const
 
 export const about = {
   paragraphs: [
     'Soy Daniel Salinas. Escribo software con foco en backend y arquitectura, y construyo productos SaaS completos: desde cómo se modela el negocio hasta cómo se despliega y se opera.',
-    'Me interesa menos acumular tecnologías que entender qué problema estamos resolviendo, cómo debería comportarse el sistema y qué va a pasar el día que reciba tráfico real. Casi todo lo que aprendí lo aprendí ahí: en el deploy que falla, en la query lenta, en el permiso que no era tan simple como parecía.',
+    'Me interesa menos acumular tecnologías que entender el problema, definir el comportamiento del sistema y anticipar qué ocurre con tráfico real. Aprendo en cada despliegue fallido, consulta lenta o permiso más complejo de lo esperado.',
     'Lo que voy construyendo lo comparto en YouTube. No para explicar teoría, sino para mostrar el proceso tal como es.',
   ],
 } as const
@@ -76,7 +76,7 @@ export const stackGroups: readonly StackGroup[] = [
   },
   {
     title: 'Cloud & Infra',
-    items: ['Render', 'Docker', 'Docker Compose', 'Cloudinary', 'Resend'],
+    items: ['AWS', 'Render', 'Docker', 'Docker Compose', 'Cloudinary', 'Resend'],
   },
   {
     title: 'Arquitectura & Prácticas',
@@ -95,8 +95,8 @@ export const content = {
   title: 'Contenido',
   headline: 'También documento lo que pasa mientras construyo',
   paragraphs: [
-    'En mi canal muestro cómo se construyen estos productos de verdad: las decisiones de arquitectura, el backend, los errores en producción y todo lo que normalmente queda fuera de un tutorial.',
-    'Sin recetas de diez minutos. El proceso tal como ocurre.',
+    'En mi canal muestro cómo construyo estos productos: decisiones de arquitectura, backend, errores en producción y lo que suele quedar fuera de un tutorial.',
+    'Sin recetas rápidas: el proceso tal como ocurre.',
   ],
   topics: [
     'Backend y APIs',
@@ -110,5 +110,5 @@ export const content = {
 
 export const contact = {
   headline: '¿Estás construyendo algo?',
-  lead: 'Si necesitás una mano con un backend, con la arquitectura de un producto o con un sistema que ya está en producción, escribime. LinkedIn es la vía más directa.',
+  lead: 'Si necesitas ayuda con un backend, la arquitectura de un producto o un sistema en producción, escríbeme. LinkedIn es la vía más directa.',
 } as const

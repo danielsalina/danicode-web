@@ -10,8 +10,7 @@ export function Stack() {
           Las herramientas con las que trabajo
         </h2>
         <p className="section__intro">
-          No es una lista de todo lo que toqué alguna vez: es lo que uso para construir y sostener
-          los productos de arriba.
+          No es todo lo que he probado: es lo que uso para construir y mantener estos productos.
         </p>
 
         <div className="stack__grid">

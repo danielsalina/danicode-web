@@ -30,26 +30,33 @@ DEPLOYMENT.md     Deploy y DNS paso a paso
 ## Development
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 ## Build
 
 ```bash
-npm run build
+pnpm typecheck
+pnpm build
+```
+
+## Tests
+
+```bash
+pnpm test
 ```
 
 ## Preview
 
 ```bash
-npm run preview
+pnpm preview
 ```
 
 ## Lint
 
 ```bash
-npm run lint
+pnpm lint
 ```
 
 ## Editar el contenido

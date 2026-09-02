@@ -102,15 +102,10 @@
   order: -1; /* en móvil la cara va primero */
   width: min(58vw, 14rem);
   justify-self: start;
-}
-
-.hero__portrait::before {
-  content: '';
-  position: absolute;
-  inset: 0.75rem -0.75rem -0.75rem 0.75rem;
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-l);
-  pointer-events: none;
+  overflow: hidden;
+  background-color: var(--surface);
 }
 
 .hero__photo {
@@ -133,8 +128,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: var(--space-s);
-  padding-left: 0.75rem;
+  padding: 0.75rem 0.875rem 0.875rem;
   border-left: 2px solid var(--accent);
   line-height: 1.4;
 }

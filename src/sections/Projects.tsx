@@ -8,11 +8,10 @@ export function Projects() {
       <div className="container">
         <p className="section__label">Proyectos</p>
         <h2 className="section__title" id="projects-title">
-          Productos reales, funcionando en producción
+          Productos reales en producción
         </h2>
         <p className="section__intro">
-          No son demos ni ejercicios. Son plataformas multi-tenant con usuarios, permisos, base de
-          datos y deploy propio. Podés entrar y verlas.
+          No son demos: son plataformas multi-tenant con usuarios, permisos, datos y despliegue propio.
         </p>
 
         <ul className="projects__list">
