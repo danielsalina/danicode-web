@@ -1,0 +1,57 @@
+# Render Blueprint — danicode.tech
+# Spec: https://render.com/docs/blueprint-spec
+#
+# Un único Static Site. Sin base de datos, sin web service, sin cron: el sitio
+# es HTML/CSS/JS estático y los static sites de Render no tienen costo.
+# Nota: los static sites no aceptan el campo `plan` ni `region`.
+
+services:
+  - type: web
+    name: danicode-web
+    runtime: static
+    branch: main
+    autoDeployTrigger: commit
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+
+    # Render crea estos custom domains al sincronizar el Blueprint y luego
+    # muestra en el dashboard los valores DNS exactos a cargar en Porkbun.
+    # Con ambos declarados, Render redirige www → apex automáticamente.
+    domains:
+      - danicode.tech
+      - www.danicode.tech
+
+    # SPA de una sola ruta: cualquier path desconocido resuelve en index.html.
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      # El sitio no usa cámara, micrófono ni geolocalización.
+      - path: /*
+        name: Permissions-Policy
+        value: camera=(), microphone=(), geolocation=(), interest-cohort=()
+      # Assets con hash en el nombre (Vite): cache inmutable.
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /fonts/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /images/*
+        name: Cache-Control
+        value: public, max-age=604800
+
+    envVars:
+      - key: NODE_VERSION
+        value: 24.15.0
