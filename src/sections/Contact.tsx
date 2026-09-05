@@ -1,5 +1,5 @@
 import { ArrowUpRight } from 'lucide-react'
-import { GithubIcon, LinkedinIcon, YoutubeIcon } from '../components/BrandIcons'
+import { GithubIcon, LinkedinIcon } from '../components/BrandIcons'
 import { contact } from '../data/content'
 import { socialLinks } from '../data/site'
 import './Contact.css'
@@ -35,16 +35,6 @@ export function Contact() {
               GitHub
             </a>
           </div>
-
-          <a
-            className="contact__secondary"
-            href={socialLinks.youtube}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <YoutubeIcon size={15} />
-            También estoy en YouTube
-          </a>
         </div>
       </div>
     </section>

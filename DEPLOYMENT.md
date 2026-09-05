@@ -53,7 +53,7 @@ git switch develop
 `render.yaml` ya declara `domains: danicode.tech` y `www.danicode.tech`, así que al aplicar
 el Blueprint ambos aparecen en **Settings → Custom Domains** del servicio.
 
-Si no aparecieran, agregalos a mano ahí (**Add Custom Domain**).
+Si no aparecieran, agrégalos a mano ahí (**Add Custom Domain**).
 
 En esa pantalla Render muestra **los valores DNS exactos** a cargar en Porkbun. Típicamente:
 
@@ -78,7 +78,7 @@ Porkbun crea registros por defecto al registrar el dominio: suele haber un `A` d
 y un `CNAME` de `www` apuntando a su página de parking o al URL forwarding.
 
 **Borra o edita solo esos dos**: el `A`/`ALIAS` del apex (`danicode.tech`, host vacío o `@`)
-y el `CNAME` de `www`. Si hay un **URL Forward** activo sobre el apex, desactivalo: pisa
+y el `CNAME` de `www`. Si hay un **URL Forward** activo sobre el apex, desactívalo: pisa
 cualquier registro DNS que cargues.
 
 **No toques** `MX`, `TXT`, `SPF`, `DKIM` ni `DMARC`. Si tienes correo asociado al dominio,
@@ -135,13 +135,13 @@ Con ambos dominios cargados en el mismo servicio, Render redirige `www` al apex.
 El apex queda como canónico, que es lo que declara `<link rel="canonical">` en `index.html`.
 
 Si prefieres lo contrario, cambia el orden de `domains:` en `render.yaml` (el primero es el
-canónico) y actualizá `canonical`, `og:url` y `sitemap.xml`.
+canónico) y actualiza `canonical`, `og:url` y `sitemap.xml`.
 
 ## 9. Deploy automático
 
 `autoDeployTrigger: commit` en `render.yaml`: cada push a `main` dispara un build.
 
-Probalo con un cambio chico:
+Pruébalo con un cambio pequeño:
 
 ```bash
 git commit --allow-empty -m "chore: verificar auto deploy"
@@ -157,8 +157,8 @@ En **Events** del servicio tiene que aparecer un deploy nuevo en menos de un min
 - **Costo**: los static sites de Render no tienen costo. El único gasto es la renovación
   del dominio en Porkbun.
 - **Headers**: `render.yaml` define `X-Content-Type-Options`, `X-Frame-Options`,
-  `Referrer-Policy`, `Permissions-Policy` y `Cache-Control`. Comprobalos con
+  `Referrer-Policy`, `Permissions-Policy` y `Cache-Control`. Compruébalos con
   `curl -sI https://danicode.tech`.
 - **Sin CSP**: no se declara `Content-Security-Policy`. El sitio no carga scripts,
-  fuentes ni imágenes de terceros, así que aportaría poco y rompe fácil. Si la agregás
+  fuentes ni imágenes de terceros, así que aportaría poco y rompe fácil. Si la agregas
   más adelante, verifica que `img-src 'self'` y `font-src 'self'` sigan cubriendo todo.
