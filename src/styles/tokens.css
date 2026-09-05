@@ -35,10 +35,10 @@
   --text-dim: #85858f;
 
   /* Acento */
-  --accent: #4c8dff;
-  --accent-hover: #6ba1ff;
-  --accent-dim: rgba(76, 141, 255, 0.14);
-  --accent-border: rgba(76, 141, 255, 0.32);
+  --accent: #d9a441;
+  --accent-hover: #e8b95c;
+  --accent-dim: rgba(217, 164, 65, 0.14);
+  --accent-border: rgba(217, 164, 65, 0.32);
 
   /* Estado */
   --live: #3ddc97;

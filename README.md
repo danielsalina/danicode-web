@@ -10,6 +10,23 @@ React 19 · TypeScript · Vite · CSS moderno (custom properties) · lucide-reac
 
 Sin router, sin estado global, sin API. El contenido editorial vive tipado en `src/data/`.
 
+Tampoco usa variables de entorno: no hay `.env` ni `.env.example` que mantener. La única
+variable del deploy (`NODE_VERSION`) está declarada en `render.yaml`.
+
+## Marca
+
+Tema oscuro con acento oro. Los colores viven en `src/styles/tokens.css`:
+
+| Token | Valor | Uso |
+|---|---|---|
+| `--accent` | `#d9a441` | Botones primarios, enlaces destacados, iconos, estado activo |
+| `--accent-hover` | `#e8b95c` | Estado hover del acento |
+| `--accent-dim` / `--accent-border` | `rgba(217, 164, 65, …)` | Fondos y bordes suaves |
+| `--live` | `#3ddc97` | Indicador «En producción» |
+
+Cambiar el acento es editar esos tokens; `public/favicon.svg` lleva el mismo hex y
+`src/styles/tokens.test.ts` verifica que no queden colores de una paleta anterior.
+
 ## Estructura
 
 ```
