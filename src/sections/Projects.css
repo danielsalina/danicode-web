@@ -47,9 +47,9 @@
   align-items: center;
   gap: 0.4375rem;
   padding: 0.25rem 0.625rem;
-  border: 1px solid rgba(61, 220, 151, 0.24);
+  border: 1px solid var(--live-border);
   border-radius: var(--radius-pill);
-  background-color: rgba(61, 220, 151, 0.08);
+  background-color: var(--live-bg);
   color: var(--live);
   font-size: var(--step--1);
   font-weight: 500;

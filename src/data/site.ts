@@ -1,10 +1,10 @@
 export const site = {
   name: 'Daniel Salinas',
   brand: 'Dani Code',
-  role: 'Software Developer · Backend · SaaS',
+  role: 'Senior Backend | Apasionado por la tecnología',
   url: 'https://danicode.tech',
   locale: 'es',
-  title: 'Daniel Salinas — Software Developer | Dani Code',
+  title: 'Daniel Salinas — Senior Backend | Dani Code',
   description:
     'Construyo productos SaaS y sistemas backend que funcionan en producción. Proyectos reales, arquitectura, cloud y contenido técnico.',
 } as const

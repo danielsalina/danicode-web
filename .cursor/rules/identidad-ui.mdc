@@ -1,0 +1,15 @@
+---
+description: Reglas de identidad visual obligatorias para cualquier cambio de UI
+alwaysApply: true
+---
+
+Antes de crear o modificar componentes, vistas o estilos, lee @docs/IDENTIDAD_UI.md y la sección "Identidad UI" de @AGENTS.md. Tienen prioridad sobre tus valores por defecto.
+
+- Colores solo por token. Nunca hex sueltos ni la paleta por defecto de Tailwind.
+- Nada amarillo, dorado ni ámbar.
+- IBM Plex Sans e IBM Plex Mono únicamente.
+- Sin degradados, blur, glow ni sombras grandes. Radios de 2, 4 o 6 px.
+- Movimiento con `var(--ease)` y 120/200/320 ms, sin rebote.
+- Estados completos y etiquetas visibles. Sin emojis como íconos.
+
+Al terminar, corre `node scripts/check-identidad.mjs` y corrige hasta que dé OK. Nunca edites el chequeo para que pase.

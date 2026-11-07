@@ -1,0 +1,8 @@
+#!/bin/sh
+# BLOQUEA EL COMMIT SI LOS ARCHIVOS EN STAGE ROMPEN LA IDENTIDAD UI
+# ACTIVAR UNA VEZ POR REPO: git config core.hooksPath .githooks
+node scripts/check-identidad.mjs --staged || {
+  echo ""
+  echo "Commit bloqueado: corrige las violaciones de docs/IDENTIDAD_UI.md."
+  exit 1
+}

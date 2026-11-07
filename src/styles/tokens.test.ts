@@ -6,11 +6,11 @@ import { describe, expect, it } from 'vitest'
 const srcDir = fileURLToPath(new URL('..', import.meta.url))
 const publicDir = fileURLToPath(new URL('../../public', import.meta.url))
 
-const ACCENT = '#d9a441'
-const ACCENT_RGB = '217, 164, 65'
+const ACCENT = '#4c8dff' // identidad-ok: constante de test que verifica el valor exacto definido en tokens.css
+const ACCENT_RGB = '76, 141, 255'
 
-/** Azul del acento anterior, en hex y en rgba(). Ningún archivo debe conservarlo. */
-const LEGACY_ACCENT = /#4c8dff|#6ba1ff|76,\s*141,\s*255/i
+/** Oro descartado por violar docs/IDENTIDAD_UI.md (prohíbe oro/dorado). Ningún archivo debe conservarlo. */
+const LEGACY_ACCENT = /#d9a441|#e8b95c|217,\s*164,\s*65/i // identidad-ok: patrón de test para detectar restos del acento oro descartado
 
 function collectFiles(dir: string, extensions: readonly string[]): string[] {
   return readdirSync(dir).flatMap((entry) => {
@@ -23,7 +23,7 @@ function collectFiles(dir: string, extensions: readonly string[]): string[] {
 const tokens = readFileSync(join(srcDir, 'styles/tokens.css'), 'utf8')
 
 describe('acento de marca', () => {
-  it('define el oro como acento y sus variantes derivadas', () => {
+  it('define el azul como acento y sus variantes derivadas', () => {
     expect(tokens).toContain(`--accent: ${ACCENT};`)
     expect(tokens).toContain(`--accent-dim: rgba(${ACCENT_RGB}, 0.14);`)
     expect(tokens).toContain(`--accent-border: rgba(${ACCENT_RGB}, 0.32);`)

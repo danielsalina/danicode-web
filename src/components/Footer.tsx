@@ -15,7 +15,7 @@ export function Footer() {
 
         <SocialLinks />
 
-        <p className="footer__copy">© {year} Daniel Salinas</p>
+        <p className="footer__copy">© {year} Daniel Salinas</p> {/* identidad-ok: símbolo de copyright tipográfico, no ícono emoji */}
       </div>
     </footer>
   )

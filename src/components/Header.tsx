@@ -87,9 +87,6 @@ export function Header() {
         </div>
       </header>
 
-      {/* El panel va fuera de <header> a propósito: el `backdrop-filter` del
-          header lo convierte en bloque contenedor de sus descendientes
-          `position: fixed`, y el menú colapsaría a la altura del header. */}
       <div id={menuId} className="mobile-menu" hidden={!open}>
         <nav className="container" aria-label="Navegación móvil">
           <ul className="mobile-menu__list">

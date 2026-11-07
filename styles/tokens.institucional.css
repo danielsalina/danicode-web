@@ -1,0 +1,16 @@
+/* identidad:tokens */
+/* TEMA INSTITUCIONAL (CLARO) · APPS NO TECH */
+/* CONTRASTES MEDIDOS SOBRE --surface: text 15,9 · muted 5,8 · subtle 4,6 · link 8,7 · border-input 3,7 · warn 5,4 · err 6,6 · ok 5,3 · blanco sobre primary 12,5 */
+:root {
+  color-scheme: light;
+  --bg: #F4F6F9;            --surface: #FFFFFF;        --surface-2: #EEF1F5;
+  --border: #D6DCE4;        --border-strong: #B9C2CE;  --border-input: #7C8696;
+  --text: #17202A;          --text-muted: #5B6673;     --text-subtle: #6B7683;
+  --primary: #12355B;       --primary-hover: #0E2A49;  --primary-active: #0A2038;
+  --primary-fg: #FFFFFF;    --primary-soft: #E3EAF3;
+  --link: #1F4C80;          --focus: #2F64D6;
+  --ok: #1E7B4D;            --ok-soft: #E4F2EA;
+  --warn: #B54708;          --warn-soft: #FBEADF;      /* NARANJA QUEMADO, NUNCA AMARILLO */
+  --err: #B42318;           --err-soft: #FBE7E5;
+  --info: #12355B;          --info-soft: #E3EAF3;
+}
